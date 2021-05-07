@@ -29,19 +29,20 @@
             <nav>
                 <h1>logo</h1>
                 <ul class="nav-list">
-                    <li><a href="#">카드</a></li>
-                    <li><a href="#">은행</a></li>
-                    <li><a href="#">투자</a></li>
-                    <li><a href="#">대출</a></li>
-                    <li><a href="#">연금</a></li>
-                    <li><a href="#">핀테크</a></li>
-                    <li><a href="#">메거진</a></li>
+                    <li data-navi="0"><a href="#">카드</a></li>
+                    <li data-navi="1"><a href="#">은행</a></li>
+                    <li data-navi="2"><a href="#">투자</a></li>
+                    <li data-navi="3"><a href="#">대출</a></li>
+                    <li data-navi="4"><a href="#">연금</a></li>
+                    <li data-navi="5"><a href="#">핀테크</a></li>
+                    <li data-navi="6"><a href="#">메거진</a></li>
                 </ul>
             </nav>
         </div>
-        <div class="navi">
-            <ul class="nav-menu">
-                <li><a href="#">카드</a></li>
+        <!-- 2021.05.07 오류 발생 -->
+        <div class="navi ItemHide">
+            <ul class="nav-menu ItemHide" data-navi="0">
+                <li><a href="#">카드1</a></li>
                 <li><a href="#">은행</a></li>
                 <li><a href="#">투자</a></li>
                 <li><a href="#">대출</a></li>
@@ -49,8 +50,8 @@
                 <li><a href="#">핀테크</a></li>
                 <li><a href="#">메거진</a></li>
             </ul>
-            <ul class="nav-menu">
-                <li><a href="#">카드</a></li>
+            <ul class="nav-menu ItemHide" data-navi="1">
+                <li><a href="#">카드2</a></li>
                 <li><a href="#">은행</a></li>
                 <li><a href="#">투자</a></li>
                 <li><a href="#">대출</a></li>
@@ -60,7 +61,18 @@
             </ul>
         </div>
     </header>
-    <article></article>
+    <article>
+        <div class="hot-card">
+            <div class = "card-position">
+                <ul class = "card-list">
+                    <li>삼성카드 taptap O</li>
+                    <li>신한 Hi-Point 카드</li>
+                    <li>신한카드 YOLO(미니언즈)</li>
+                    <li>KB국민카드 청춘대로 톡톡카드</li>
+                </ul>
+            </div>
+        </div>
+    </article>
     <footer>
         <span>&copy; 2021 BankSalad clone</span>
     </footer>
