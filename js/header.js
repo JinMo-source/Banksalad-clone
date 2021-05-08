@@ -50,25 +50,3 @@ for(let i=0; i <navListLi.length; i++){
 }
 
     navList.addEventListener("mouseout",navHandleOut);
-
-
-// 인기 카드 HOT Card
-
-const cardList = document.querySelector('.card-list');
-let listStyle = cardList.style;
-listStyle.transitionDuration = 1+'s';
-// listStyle.top = -100+'px';
-let currentPosition = -50;
-
-function cardListHandle(){
-    const listHeight = cardList.offsetHeight;
-
-    if(listHeight <= Math.abs(currentPosition)){
-        currentPosition = 0;
-    }
-    listStyle.top = currentPosition+'px';
-    currentPosition = currentPosition-50;
-}
-
-setInterval(cardListHandle,1500);
-
