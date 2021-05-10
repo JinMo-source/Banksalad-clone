@@ -42,14 +42,32 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
     width: 300px;
     height: 50px;
 }
-.slider {
+.slider-wrap {
     width: 100%;
-    height: 450px;
+    height: 480px;   
+    position: relative;
+    background-color: #04c584;
+}
+
+.slider-trans {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.slider-back {
+    width: 100%;
+    height: 100%;
 }
 .slider-image {
     width: 100%;
-    height: 500px;
-    position: relative;
+    height: 480px;
+    background-color: hotpink;
     display: inline-block;
-    background-color: red;
+    vertical-align: bottom;
+}
+
+.button {
+    position: absolute;
+    top:50%;
+    left:0;
 }
