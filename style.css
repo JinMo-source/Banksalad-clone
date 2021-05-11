@@ -42,11 +42,16 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
     width: 300px;
     height: 50px;
 }
+
+
 .slider-wrap {
     width: 100%;
     height: 480px;   
+    display: block;
     position: relative;
+    /* overflow: hidden; */
     background-color: #04c584;
+    white-space: nowrap;
 }
 
 .slider-trans {
@@ -58,10 +63,11 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
     width: 100%;
     height: 100%;
 }
-.slider-image {
+.slider-Item {
     width: 100%;
     height: 480px;
     background-color: hotpink;
+    position: relative;
     display: inline-block;
     vertical-align: bottom;
 }

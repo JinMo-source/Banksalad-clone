@@ -3,10 +3,13 @@ const sliderWidth = slider.offsetWidth;
 const sliderMove = document.querySelector('.slider-trans');
 const nextBotton = document.querySelector('.next');
 
+const sliderMoveStyle = sliderMove.style;
+let current = 0;
+
 
 function sliderNextHandle(){
-    console.log(sliderWidth)
-    sliderMove.style.transform = `translateX(${sliderWidth}px)`;
+    current = current-sliderWidth;
+    sliderMoveStyle.transform = `translateX(${current}px)`;
     console.log(sliderMove.style);
     console.log(sliderMove.style.transform);
 }
