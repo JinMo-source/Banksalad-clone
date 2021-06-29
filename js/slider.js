@@ -1,48 +1,69 @@
 const slider = document.querySelector('.slider-wrap');
 const sliderMove = document.querySelector('.slider-trans');
 const nextBotton = document.querySelector('.next');
+const prevBotton = document.querySelector('.prev');
 const sliderUL = document.querySelector('.slider-back');
-
-const sliderWidth = slider.offsetWidth;
-const sliderMoveStyle = sliderMove.style;
 
 const sliderLength = document.querySelectorAll('.slider-Item');
 const sliderNavi = document.querySelector('.slider-navi');
 
-let current = 0;
+const sliderWidth = slider.offsetWidth;
+const sliderMoveStyle = sliderMove.style;
 
-function sl(){
-    if(sliderWidth <= Math.abs(current)){
-        current=0;
-        sliderMoveStyle.transform = `translateX(${current}px)`;
-    }else {
-        current = current-sliderWidth;
-        sliderMoveStyle.transform = `translateX(${current}px)`;
 
+//작동
+function mainSlider(){
+    let current = 0;
+
+    function sl(){
+        if(sliderWidth <= Math.abs(current)){
+            current=0;
+            sliderMoveStyle.transform = `translateX(${current}px)`;
+        }else {
+            current = current-sliderWidth;
+            sliderMoveStyle.transform = `translateX(${current}px)`;
+
+        }
     }
-}
 
 
 
-function sliderNextHandle(){
-    if(sliderWidth <= Math.abs(current)){
-        current=0;
-        sliderMoveStyle.transform = `translateX(${current}px)`;
-    }else {
-        current = current-sliderWidth;
-        sliderMoveStyle.transform = `translateX(${current}px)`;
-
+    function sliderNextHandle(){
+        if(sliderWidth <= Math.abs(current)){
+            current = 0;
+            sliderMoveStyle.transform = `translateX(${current}px)`;
+        }else {
+            current = current-sliderWidth;
+            sliderMoveStyle.transform = `translateX(${current}px)`;
+        }
     }
+
+    function sliderPrevHandle(){
+        if(sliderWidth == Math.abs(current)){
+            current = 0;
+            sliderMoveStyle.transform = `translateX(${current*2}px)`;
+        }else {
+            current = current-sliderWidth;
+            sliderMoveStyle.transform = `translateX(${current}px)`;
+        }
+    }
+
+    setInterval(sl,1500);
+    nextBotton.addEventListener('click',sliderNextHandle);
+    prevBotton.addEventListener('click',sliderPrevHandle);
 }
+mainSlider();
 
 
-setInterval(sl,1000);
 
-nextBotton.addEventListener('click',sliderNextHandle);
+// navi
+function sliderLI(){
+    sliderNavi.innerHTML = '';
 
-function naviLI(){
     sliderLength.forEach((value,ind) => {
-    `<li class= 'navi-ID__${ind} navi'>${ind}</li>`
-})
+        let naviLI = `<li class= "navi-ID__${ind} sliderNavi"></li>`;
+        sliderNavi.insertAdjacentHTML('afterbegin', naviLI);
+    })
 }
-sliderNavi.insertAdjacentHTML('afterbegin', naviLI);
+
+sliderLI();
