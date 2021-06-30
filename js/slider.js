@@ -8,6 +8,7 @@ const sliderLength = document.querySelectorAll('.slider-Item');
 const sliderNavi = document.querySelector('.slider-navi');
 
 const sliderWidth = slider.offsetWidth;
+console.log(sliderWidth);
 const sliderMoveStyle = sliderMove.style;
 
 
@@ -49,9 +50,11 @@ function mainSlider(){
     }
 
     setInterval(sl,1500);
+
     nextBotton.addEventListener('click',sliderNextHandle);
     prevBotton.addEventListener('click',sliderPrevHandle);
 }
+
 mainSlider();
 
 
@@ -61,9 +64,18 @@ function sliderLI(){
     sliderNavi.innerHTML = '';
 
     sliderLength.forEach((value,ind) => {
-        let naviLI = `<li class= "navi-ID__${ind} sliderNavi"></li>`;
+        let naviLI = `<li id="carousel-id-${ind}" class="carousel"></li>`;
         sliderNavi.insertAdjacentHTML('afterbegin', naviLI);
     })
+
+    function naviHandle(e){
+        let carId = e.target.id.split("-")[2];
+        current = 0;
+        sliderMoveStyle.transform = `translateX(${-sliderWidth*carId}px)`;
+    }
+    
+    sliderNavi.addEventListener('click',naviHandle)
 }
+
 
 sliderLI();
