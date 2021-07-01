@@ -7,8 +7,7 @@ const sliderUL = document.querySelector('.slider-back');
 const sliderLength = document.querySelectorAll('.slider-Item');
 const sliderNavi = document.querySelector('.slider-navi');
 
-const sliderWidth = slider.offsetWidth;
-console.log(sliderWidth);
+const sliderWidth = slider.offsetWidth+3;
 const sliderMoveStyle = sliderMove.style;
 
 
