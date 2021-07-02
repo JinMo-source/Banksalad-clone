@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
     <title>BankSalad</title>
 </head>
 <body>
@@ -61,29 +61,48 @@
     <article>
         <div class="hot-card">
             <div class = "card-position">
-                <ul class = "card-list">
-                    <li>삼성카드 taptap O</li>
-                    <li>신한 Hi-Point 카드</li>
-                    <li>신한카드 YOLO(미니언즈)</li>
-                    <li>KB국민카드 청춘대로 톡톡카드</li>
-                </ul>
+                <div class="card-position__box boxHide">
+                    <ul class = "card-list">
+                        <li><span class="cardRanking">1.</span>삼성카드 taptap O</li>
+                        <li><span class="cardRanking">2.</span> Hi-Point 카드</li>
+                        <li><span class="cardRanking">3.</span>카드 YOLO(미니언즈)</li>
+                        <li><span class="cardRanking">4.</span>KB국민카드 청춘대로 톡톡카드</li>
+                        <li><span class="cardRanking">5.</span>씨티카드 씨티 리워드 카드</li>
+                        <li><span class="cardRanking">6.</span>롯데카드 LIKIT ALL 카드</li>
+                        <li><span class="cardRanking">7.</span>KB국민카드 탄탄대로 올쇼핑 티타늄카드</li>
+                        <li><span class="cardRanking">8.</span>삼성카드 삼성카드 taptapS</li>
+                        <li><span class="cardRanking">9.</span>신한카드 B.Big(삑)</li>
+                    </ul>
+                </div>
+                <div class="card-more"><a href="#">인기카드 더보기</a></div>
             </div>
         </div>
         <div class="slider-wrap">
             <div class="slider-trans">
                 <ul class="slider-back">
-                    <li class="slider-Item">1
+                    <li class="slider-Item">
                         <div>
-                            1
+                            <p>데이터를 맛보다</p>
+                            <p>뱅크샐러드</p>
+                            <div class="bottonWrap">
+                                <a href="#" class="lineWrap">앱 소개보기</a>
+                                <a href="#" class="downloadWrap">다운로드</a>
+                            </div>
                         </div>
                     </li>
-                    <li class="slider-Item">2
-                        <div>2</div>
+                    <li class="slider-Item">
+                        <div>
+                            <p>3800개 카드 중</p>
+                            <p>나에게 가장 큰 혜택을 주는 카드는?</p>
+                            <div class="bottonWrap">
+                                <a href="#" class="downloadWrap">나의 BEST 카드찾기</a>
+                            </div>
+                        </div>
                     </li>
                 </ul>
             </div>
-            <button class="next button">next</button>
-            <button class="prev button">prev</button>
+            <button class="next button"></button>
+            <button class="prev button"></button>
             <!-- <button class="prev button">prev</button> -->
             <ul class="slider-navi">
                 <!-- navigation -->
@@ -91,46 +110,149 @@
         </div>
     </article>
     <!-- slider -->
-    <article>
-        <div class="wrapper">
+    <article class = "article1">
+        <div class="article1__wrapper">
             <div class="bank-pop">
                 <p>내게 맞는 금융상품,비교하기 힘드시죠?</p>
                 <p>뱅크샐러드는 쉽고 정확하게 비교합니다.</p>
-                <ul>
-                    <li>1</li>
-                    <li>2</li>
-                    <li>3</li>
+                <ul class = "article1-features">
+                    <li>
+                        <div class="article1-img__size">
+                            <img src="./img/article1-img1.svg" alt="이미지">
+                        </div>
+                        <div class="article1-img__text">
+                            <p>국내 최대 금용상품 데이터</p>
+                            <p>금융 상품 데이터뿐만 아니라,전월 실적,한도 조건 등 복잡하고 어려운 금융상품의 각종 조건 데이터까지 모두 챙겼습니다.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="article1-img__size">
+                            <img src="./img/article1-img2.svg" alt="이미지">
+                        </div>
+                        <div class="article1-img__text">
+                            <p>나만을 위한 맞춤 추천</p>
+                            <p>수백만까지 경우의 수를 계산하는 추천 알고리즘이 나를 위한 맞춤 상품을 찾아드립니다.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="article1-img__size">
+                            <img src="./img/article1-img3.svg" alt="이미지">
+                        </div>
+                        <div class="article1-img__text">
+                            <p>광고,홍보 X</p>
+                            <p>뱅크샐러드의 추천에는 광고도,홍보도 업습니다.오직 객관적인 데이터만을 활용합니다.</p>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </div>
     </article>
     <!-- bankPop -->
-    <article>
-        <div class="wrapper">
+    <article class ="article2">
+        <div class="article2__wrapper">
             <p class="bank-title__font">뱅크샐러드 Pick!</p>
             <ul class="bank-pick__list">
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
-                <li>4</li>
-                <li>5</li>
-                <li>6</li>
-                <li>7</li>
+                <li>
+                    <div>
+                        <div class="article2__box">
+                            <div class="article2-img__size article2-img1"></div>
+                        </div>
+                        <div class="article2-img__text">
+                            <p>카드</p>
+                            <p>2020년 신용카드 추천</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <div class="article2__box">
+                            <div class="article2-img__size article2-img2"></div>
+                        </div>
+                        <div class="article2-img__text">
+                            <p>은행</p>
+                            <p>2019 BEST 예금 & 적금</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <div class="article2__box">
+                            <div class="article2-img__size article2-img3"></div>
+                        </div>
+                        <div class="article2-img__text">
+                            <p>투자</p>
+                            <p>투자 성향별 BEST 로보-어드바이저</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <div class="article2__box">
+                            <div class="article2-img__size article2-img4"></div>
+                        </div>
+                        <div class="article2-img__text">
+                            <p>대출</p>
+                            <p>은행권 특징별 BEST 신용대출</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <div class="article2__box">
+                            <div class="article2-img__size article2-img5"></div>
+                        </div>
+                        <div class="article2-img__text">
+                            <p>연금</p>
+                            <p>연금저축,어디서 가입할까?</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <div class="article2__box">
+                            <div class="article2-img__size article2-img6"></div>
+                        </div>
+                        <div class="article2-img__text">
+                            <p>핀테크</p>
+                            <p>케이뱅크VS카카오뱅크 비교분석</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <div class="article2__box">
+                            <div class="article2-img__size article2-img7"></div>
+                        </div>
+                        <div class="article2-img__text">
+                            <p>매거진</p>
+                            <p>나만을 위한 내 돈 관리앱!</p>
+                        </div>
+                    </div>
+                </li>
             </ul>
         </div>
     </article>
-    <article>
-        <div class="wrapper">
+    <article class="article3">
+        <div class="article3__wrapper">
             <p class="bank-title__font">경제전문가의 금융 리뷰</p>
-            <ul class="bank-review__tab"></ul>
-            <ul class="bank-review__list"></ul>
-        </div>
-    </article>
-    <article>
-        <div class="wrapper">
-            <p class="bank-title__font">부자되는 금융 꿀팁</p>
-            <ul class="bank-review__tab"></ul>
-            <ul class="bank-review__list"></ul>
+            <ul class="bank-review__tab">
+                <li class="tab-list" data-img ="1">카드</li>
+                <li class="tab-list" data-img ="2">은행</li>
+                <li class="tab-list" data-img ="3">투자</li>
+                <li class="tab-list" data-img ="4">대출</li>
+                <li class="tab-list" data-img ="5">연금</li>
+                <li class="tab-list" data-img ="6">핀테크</li>
+                <li class="tab-list" data-img ="7">매거진</li>
+            </ul>
+            <ul class="bank-review__list">
+                <li class="tab-image">
+                    <div class="tab-image__size">1</div>
+                    <div class="tab-image__size">2</div>
+                    <div class="tab-image__size">3</div>
+                    <div class="tab-image__size">4</div>
+                    <div class="tab-image__size">5</div>
+                </li>
+            </ul>
         </div>
     </article>
     <footer>
@@ -140,4 +262,5 @@
     <script src="./js/header.js"></script>
     <script src="./js/cardRank.js"></script>
     <script src="./js/slider.js"></script>
+    <script src="./js/tab.js"></script>
 </html>
