@@ -6,14 +6,21 @@ const sliderUL = document.querySelector('.slider-back');
 
 const sliderLength = document.querySelectorAll('.slider-Item');
 const sliderNavi = document.querySelector('.slider-navi');
-
-const sliderWidth = slider.offsetWidth+3;
+let widthChange = slider.offsetWidth
+let sliderWidth = widthChange+3;
 const sliderMoveStyle = sliderMove.style;
+let windowWidth = window.innerWidth;
 
-
+function widthHandle(){
+    current = 0;
+    widthChange = slider.offsetWidth;
+    sliderWidth =  widthChange+3;
+}
+window.addEventListener('resize',widthHandle)
 //작동
 function mainSlider(){
     let current = 0;
+    sliderMoveStyle.transform = `translateX(${current}px)`;
 
     function sl(){
         if(sliderWidth <= Math.abs(current)){

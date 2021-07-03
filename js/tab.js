@@ -1,35 +1,57 @@
 const tabNumber = document.querySelector('.bank-review__tab');
-const tabBox = document.querySelector('.tab-image')
-const tabImg = document.querySelectorAll('.tab-image>div');
+const tabImg = document.querySelector('.bank-review__list');
+const dataImg = [
+    img1 = {
+        img : "../bank/img/tab-img1",
+        text : "tab1입니다"
+    },
+    img2 = {
+        img : "../bank/img/tab-img1",
+        text : "tab2입니다"
+    },
+    img3 = {
+        img : "../bank/img/tab-img1",
+        text : "tab3입니다"
+    },
+    img4 = {
+        img : "../bank/img/tab-img1",
+        text : "tab4입니다"
+    },
+    img5 = {
+        img : "../bank/img/tab-img1",
+        text : "tab5입니다"
+    },
+    img6 = {
+        img : "../bank/img/tab-img1",
+        text : "tab6입니다"
+    },
+    img7 = {
+        img : "../bank/img/tab-img1",
+        text : "tab7입니다"
+    },
+    img8 = {
+        img : "../bank/img/tab-img1",
+        text : "tab8입니다"
+    }
+]
 
 function tabHandle(e){
     let dataNumber = e.target.dataset.img;
-    tabBox.innerHTML = "";
-    
-    for(let i =0; i < 8;i++){
-        let divImg = `<div class="tab-image__size"><img src="../img/tab-${dataNumber}"></div>`;
-        console.log(testImage('../bank/img/slider1.png'));
-        if(testImage('../bank/img/slider1.png')){
-            console.log('true');
-            return tabBox.insertAdjacentHTML('afterbegin', divImg);
-        }else if(!testImage('./img/slider1.png')){
-            console.log(false);
-            return alert('false');
-        }
+    tabImg.innerHTML ="";
+    for(let i=7;i>0;i--){
+        let divImg = `
+            <li class="tab-image">
+                <div class = "tab-image__size">
+                    <div>
+                        <img src="${dataImg[dataNumber].img}-${i}.jpeg">
+                    </div>
+                    <p>${dataImg[dataNumber].text}</p>
+                </div>
+            </li>
+        `
 
+        tabImg.insertAdjacentHTML('afterbegin', divImg);
     }
-    
-}
-function testImage(URL) {
-    var tester=new Image();
-   tester.onload= isGood;
-   tester.onerror=isBad;
-   tester.src=URL;
-   console.log(tester.src);
-   function isGood() { console.log('true')
-       return true};
-   function isBad() { return false};
 }
 
-// testImage('./img/slider1.png')
 tabNumber.addEventListener('click',tabHandle);
