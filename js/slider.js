@@ -22,6 +22,7 @@ function mainSlider(){
     let current = 0;
     sliderMoveStyle.transform = `translateX(${current}px)`;
 
+
     function sl(){
         if(sliderWidth <= Math.abs(current)){
             current=0;
@@ -55,7 +56,7 @@ function mainSlider(){
         }
     }
 
-    setInterval(sl,1500);
+    setInterval(sl,2000);
 
     nextBotton.addEventListener('click',sliderNextHandle);
     prevBotton.addEventListener('click',sliderPrevHandle);
